@@ -395,3 +395,316 @@ align-items: center;
 justify-content: space-between;
 gap: 40px;
 }
+/* ================= RESPONSIVE DESIGN ================= */
+
+/* Tablets */
+@media screen and (max-width: 1024px) {
+
+    .navbar {
+        padding: 15px 20px;
+    }
+
+    .nav-left,
+    .nav-menu,
+    .nav-right {
+        gap: 15px;
+    }
+
+    .nav-left .nav-logo .logo {
+        font-size: 1.5rem;
+        margin-right: 5px;
+    }
+
+    .nav-left .nav-menu li a {
+        padding: 6px;
+        font-size: 0.9rem;
+    }
+
+    .hero-section .section-content {
+        gap: 20px;
+    }
+
+    .hero-section .section-content .hero-details h1 {
+        font-size: 2.3rem;
+        max-width: 100%;
+    }
+
+    .hero-section .section-content .hero-details p {
+        max-width: 100%;
+    }
+
+    .about-us {
+        padding: 120px 0;
+    }
+
+    .about-us .section-content {
+        gap: 30px;
+    }
+
+    .about-us .section-content .about-image img {
+        width: 350px;
+    }
+
+    .christmas-section .menu-list .menu-item,
+    .menu-section .menu-list .menu-item {
+        width: 45%;
+    }
+}
+
+
+/* Mobile */
+@media screen and (max-width: 768px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .nav-left,
+    .nav-menu,
+    .nav-right {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .nav-left {
+        flex-direction: column;
+    }
+
+    .nav-left .nav-logo .logo {
+        margin-right: 0;
+        font-size: 1.6rem;
+    }
+
+    .nav-left .nav-menu {
+        flex-wrap: wrap;
+    }
+
+    .nav-left .nav-menu li a {
+        font-size: 0.85rem;
+        padding: 5px;
+    }
+
+    .nav-right {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .nav-right .btn {
+        padding: 7px 18px;
+    }
+
+
+    /* Search */
+    .search input {
+        top: 30px;
+        right: -70px;
+        width: 180px;
+    }
+
+
+    /* Hero */
+    .hero-section {
+        padding-top: 150px;
+    }
+
+    .hero-section .section-content {
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-top: 40px;
+        padding-bottom: 60px;
+    }
+
+    .hero-section .section-content .hero-details h1 {
+        max-width: 100%;
+        font-size: 2rem;
+    }
+
+    .hero-section .section-content .hero-details p {
+        max-width: 100%;
+        font-size: 1rem;
+        line-height: 1.8;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        border-radius: 15px;
+    }
+
+
+    /* About */
+    .about-us {
+        padding: 100px 0;
+    }
+
+    .about-us .section-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .about-us .section-content .about-image img {
+        width: 300px;
+        max-width: 90%;
+    }
+
+    .about-us .about-details {
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .about-details p {
+        font-size: 1rem;
+        line-height: 1.9;
+        margin: 30px 0;
+    }
+
+
+    /* Section Titles */
+    .section-title {
+        font-size: 1.3rem;
+        padding: 45px 0 50px;
+    }
+
+
+    /* Christmas Donuts & Menu */
+    .christmas-section,
+    .menu-section {
+        padding: 50px 15px;
+    }
+
+    .christmas-section .menu-list,
+    .menu-section .menu-list {
+        gap: 25px;
+    }
+
+    .christmas-section .menu-list .menu-item,
+    .menu-section .menu-list .menu-item {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .christmas-section .menu-list .menu-item img,
+    .menu-section .menu-list .menu-item img {
+        height: 280px;
+    }
+
+
+    /* Contact */
+    .contact-us {
+        padding: 40px 20px 100px;
+    }
+
+    .contact-us .section-contact {
+        flex-direction: column;
+        gap: 40px;
+        padding: 0 10px;
+    }
+
+    .contact-us .contact-details {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .contact-form {
+        width: 100%;
+    }
+
+    .contact-form form {
+        max-width: 100%;
+        width: 100%;
+    }
+
+
+    /* Footer */
+    .footer {
+        height: auto;
+        padding: 25px 20px;
+    }
+
+    .footer .section-content {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer .section-content .footer-links ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+
+/* Small Phones */
+@media screen and (max-width: 480px) {
+
+    .nav-left .nav-menu {
+        gap: 5px;
+    }
+
+    .nav-left .nav-menu li a {
+        font-size: 0.75rem;
+        padding: 4px;
+    }
+
+    .nav-right {
+        gap: 10px;
+    }
+
+    .nav-right .btn {
+        font-size: 0.8rem;
+        padding: 6px 14px;
+    }
+
+    .hero-section {
+        padding-top: 170px;
+    }
+
+    .hero-section .section-content .hero-details h1 {
+        font-size: 1.7rem;
+    }
+
+    .hero-section .section-content .hero-details p {
+        font-size: 0.9rem;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+    }
+
+    .about-us .section-content .about-image img {
+        width: 250px;
+    }
+
+    .christmas-section .menu-list .menu-item img,
+    .menu-section .menu-list .menu-item img {
+        height: 230px;
+    }
+
+    .section-title {
+        font-size: 1.1rem;
+    }
+
+    .contact-us .contact-details div {
+        align-items: flex-start;
+    }
+
+    .footer .section-content .footer-links ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
