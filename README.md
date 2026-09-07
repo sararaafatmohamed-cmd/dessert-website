@@ -31,7 +31,7 @@ The website provides a simple and interactive experience for browsing donuts, ex
 
 ![Menu](screenshots/Menu.png)
 
-![Sign Up](screenshots/Siggn_up.png)
+![Sign Up](screenshots/Sign_up.png)
 
 ### 📱 Mobile
 
