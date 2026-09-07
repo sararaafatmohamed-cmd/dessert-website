@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sign Up</title>
+
+<style>
+
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Arial, sans-serif;
+    background:antiquewhite;
+}
+
+
+.container{
+    width:350px;
+    background:#fff;
+    padding:30px 25px;
+    border-radius:18px;           
+    border:2px solid #5e1f12;
+    box-shadow:0 10px 25px #5e1f12;
+    text-align:center;
+}
+
+
+.container h2{
+    margin-bottom:20px;
+    font-size:24px;
+}
+
+
+.container input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:14px;
+    box-sizing:border-box;
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background:#5e1f12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 12px;
+}
+button:hover{
+    background-color: transparent;
+    color: #5e1f12;
+    padding: 8px 22px;
+    border: 1px solid #5e1f12;
+}
+
+
+.link{
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.login-link{
+    color: #5e1f12;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+
+.login-link:hover{
+    text-decoration:underline;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+    <h2>Sign up</h2>
+
+    <input type="text" id="username" placeholder="Full Name">
+    <input type="email" id="email" placeholder="Email Address">
+    <div style="position:relative;">
+        <input type="password" id="password" placeholder="Password" style="width:100%; padding-right:40px;">
+        <i id="toggle-password" class="fa-solid fa-eye" style="position:absolute; right:10px; top:50%; transform:translateY(-50%); cursor:pointer;"></i>
+    </div>
+    <input type="password" id="confirm-password" placeholder="Confirm Password">
+
+    <button id="signup-btn">Create Account</button>
+
+    <div class="link">
+        Already have an account?
+        <a href="login.html" class="login-link">Log in</a>
+    </div>
+
+    <div id="error-msg" style="color:red; display:none; margin-top:10px;"></div>
+</div>
+
+<script>
+const usernameInput = document.getElementById('username');
+const emailInput = document.getElementById('email');
+const passwordInput = document.getElementById('password');
+const confirmPasswordInput = document.getElementById('confirm-password');
+const togglePassword = document.getElementById('toggle-password');
+const errorMsg = document.getElementById('error-msg');
+const signupBtn = document.getElementById('signup-btn');
+
+togglePassword.addEventListener('click', () => {
+    if(passwordInput.type === 'password'){
+        passwordInput.type = 'text';
+        togglePassword.classList.replace('fa-eye', 'fa-eye-slash');
+    } else {
+        passwordInput.type = 'password';
+        togglePassword.classList.replace('fa-eye-slash', 'fa-eye');
+    }
+});
+
+[usernameInput, emailInput, passwordInput, confirmPasswordInput].forEach(input => {
+    input.addEventListener('input', () => {
+        errorMsg.style.display = 'none';
+    });
+});
+
+signupBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const username = usernameInput.value.trim();
+    const email = emailInput.value.trim();
+    const password = passwordInput.value.trim();
+    const confirmPassword = confirmPasswordInput.value.trim();
+
+    if (!username || !email || !password || !confirmPassword){
+        errorMsg.textContent = "Please fill in all fields!";
+        errorMsg.style.display = 'block';
+        return;
+    }
+
+    if(password !== confirmPassword){
+        errorMsg.textContent = "Passwords do not match!";
+        errorMsg.style.display = 'block';
+        return;
+    }
+
+    alert(`Welcome ${username}! Your account has been created.`);
+
+    usernameInput.value = '';
+    emailInput.value = '';
+    passwordInput.value = '';
+    confirmPasswordInput.value = '';
+});
+</script>
+</body>
+</html>

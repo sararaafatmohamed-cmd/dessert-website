@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: antiquewhite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    
+    .login-box {
+        background-color: white;
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 12px 30px #5e1f12; 
+        text-align: center;
+        border: 2px solid #5e1f12;
+        width: 300px;
+    }
+
+    .login-box h2 {
+        margin-bottom: 20px;
+        color: #5e1f12;
+    }
+
+    .login-box input[type="text"],
+    .login-box input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+    }
+
+    .login-box button {
+    width: 100%;
+    padding: 15px;
+    background:#5e1f12;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin-top: 12px;
+    }
+
+    .login-box button:hover {
+    background-color: transparent;
+    color: #5e1f12;
+    padding: 8px 22px;
+    border: 1px solid #5e1f12;
+    }
+
+    .highlight {
+        color: #5e1f12;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body>
+<div class="login-box">
+    <h2><span class="highlight">Login</span></h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+</div>
+
+<script>
+function login() {
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    if (username === "" || password === "") {
+        alert("Please fill in both fields!");
+    } else {
+        alert("Welcome, " + username + "!");
+    }
+}
+</script>
+</body>
+</html>
